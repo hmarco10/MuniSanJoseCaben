@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<html style="background: url({% static 'images/portadalogin.jpg' %}) no-repeat;background-size:cover;background-position: top center;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+      <div style="opacity: 0.7" id="formContent">
+        <h2 class="active"> Registro </h2>
+        <form action="{% url 'user:register' %}" method="POST">
+            {% csrf_token %}
+        <input type="text" id="text" class="fadeIn second" name="first_name" placeholder="Nombre">
+          <input type="text" id="last_name" class="fadeIn third" name="last_name" placeholder="Apellido">
+          <input type="text" id="phone" class="fadeIn second" name="phone" placeholder="Telefono">
+          <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email">
+          <input type="text" id="address" class="fadeIn second" name="address" placeholder="Direccion">
+          <input type="password" id="passwoer" class="fadeIn second" name="password" placeholder="Contraseña">
+          <input type="submit" class="fadeIn fourth" value="Registrare">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="{% url 'user:login'%} ">Iniciar Sesion</a>
+        </div>
+
+      </div>
+    </div>
+</body>
+</html>

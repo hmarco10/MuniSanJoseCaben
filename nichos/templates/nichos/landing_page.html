@@ -1,0 +1,461 @@
+{% extends 'nichos/base.html' %}
+{% block content %}
+{% load static %}
+<div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Cargando...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
+              <div class="rd-navbar-aside">
+                <ul class="list-inline navbar-contact-list">
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                      <div class="unit-body"><a href="tel:#">+502  4132 2534 </a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
+                      <div class="unit-body"><a href="mailto:#"></a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
+                      <div class="unit-body"><a href="#">San José Caben, San Pedro, San Marcos</a></div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="social-links">
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="{% url 'nichos:index' user.pk %}"><img class="brand-logo-dark" src="" alt="" width="100" height="17"/><img class="brand-logo-light" src="{% static 'images/logo-inverse-200x34.png' %}" alt="" width="100" height="17"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:contact1' %}">Acerca De</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'user:login' %}">Iniciar Sesión</a>
+                        
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--Main section-->
+      <section class="section main-section parallax-scene-js" style="background: url({% static 'images/portada.jpg' %}) no-repeat center center; background-size:cover; ">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-1">
+              <div class="main-decorated-box text-center text-xl-left">
+                <h1  class="text-white text-xl-center wow slideInRight" data-wow-delay=".3s"><span class="align-top offset-top-30 d-inline-block font-weight-light prefix-text"></span><span  style="font-style: oblique">Aldea San José Caben 2,019</span>
+                <div style="font-size: 17px;">San Pedro, San Marcos, Guatemala</div>
+              </div>
+            </div>
+            <div class="col-12 text-center offset-top-75" data-wow-delay=".2s"><a class="button-way-point d-inline-block text-center d-inline-flex flex-column justify-content-center" href="#" data-custom-scroll-to="about"><span class="fa-chevron-down"></span></a></div>
+          </div>
+        </div>
+        <div class="decorate-layer">
+          <div class="layer-1">
+            <div class="layer" data-depth=".20"><img src="{% static 'images/parallax-item-1-563x532.png' %}" alt="" width="563" height="266"/>
+            </div>
+          </div>
+          <div class="layer-2">
+            <div class="layer" data-depth=".30"><img src="{% static 'images/parallax-item-2-276x343.png' %}" alt="" width="276" height="171"/>
+            </div>
+          </div>
+          <div class="layer-3">
+            <div class="layer" data-depth=".40"><img src="{% static 'images/parallax-item-3-153x144.png' %}" alt="" width="153" height="72"/>
+            </div>
+          </div>
+          <div class="layer-4">
+            <div class="layer" data-depth=".20"><img src="{% static 'images/parallax-item-4-69x74.png' %}" alt="" width="69" height="37"/>
+            </div>
+          </div>
+          <div class="layer-5">
+            <div class="layer" data-depth=".40"><img src="{% static 'images/parallax-item-5-72x75.png' %}" alt="" width="72" height="37"/>
+            </div>
+          </div>
+          <div class="layer-6">
+            <div class="layer" data-depth=".30"><img src="{% static 'images/parallax-item-6-45x54.png' %}" alt="" width="45" height="27"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--About-->
+      <section class="section section-sm position-relative" id="about">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-lg-6">
+              <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img src="{% static 'images/sanpedro33.jpg' %}" alt="" width="570" height="351"/>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="block-sm offset-top-50">
+                <div class="section-name wow fadeInRight" data-wow-delay=".2s">Acerca de la aldea</div>
+                <h3 class="wow fadeInCenter text-capitalize devider-bottom" data-wow-delay=".3s">Datos<span class="text-primary"> Historicos</span></h3>
+                <p align="justify" class="offset-xl-40 wow fadeInUp" data-wow-delay=".4s">
+                  En relación a su etimología, al principio la comunidad se llamaba “Tregaben”, 
+                  término mam que significa Incendio o lugar de muchos incendios, posteriormente 
+                  fue llamado PARAJE de CABEN, fueron los españoles los que lo bautizaron en el nombre 
+                  de “SAN JOSÉ”,  por lo que en el mes de marzo de 1922, el religioso vecino José Zenón 
+                  Miranda obsequio a la comunidad una imagen del célebre Patriarca “San José”, siendo 
+                  esto el origen de su nombre actual “San José Caben”.
+                </p>
+                <!--p class="default-letter-spacing font-weight-bold text-gray-dark wow fadeInUp" data-wow-delay=".4s">We have over fifteen years of successful experience in financial sphere in the US business market.</p><a class="button-width-190 button-primary button-circle button-lg button offset-top-30" href="#">read more</a-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="decor-text decor-text-1">San José</div>
+      </section>
+      
+      <section class="section section-sm position-relative" id="about">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-lg-6">
+              <div class="block-sm offset-top-50">
+                <div class="section-name wow fadeInRight" data-wow-delay=".2s">CARACTERÍSTICAS GENERALES</div>
+                <h3 class="wow fadeInCenter text-capitalize devider-bottom" data-wow-delay=".3s">Geografía y<span class="text-primary"> Localización </span></h3>
+                <p align="justify" class="offset-xl-40 wow fadeInUp" data-wow-delay=".4s">
+                  La comunidad de San José Caben, del municipio de San Pedro Sacatepéquez, 
+                  del departamento de San Marcos, se encuentra localizada en la parte Norte 
+                  de la Cabecera Municipal, Ubicada en la zona occidental del país, ocupa una 
+                  extensión  territorial de dos caballerías y 7/8 de otra y está limitada al 
+                  norte con el municipio de San Lorenzo, al sur con la cabecera municipal, al 
+                  oeste con la Aldea La Grandeza y al este con las aldeas San Isidro Chamac y 
+                  Santa Teresa, del municipio de San Pedro Sacatepéquez, departamento de San 
+                  Marcos.
+                  Dista de la cabecera, cuatro kilómetros, de los cuales un kilómetro es carretera
+                  asfaltada que inicia del centro de la ciudad de San Pedro Sacatepéquez hasta la 
+                  entrada a la comunidad salida a la ciudad de Quetzaltenango, y tres kilómetros de 
+                  camino empedrado con carrileras y partes ya totalmente adoquinadas o pavimentadas, 
+                  anteriormente se llegaba a la comunidad por un solo camino, el cual los habitantes 
+                  le han llamado Camino Real, camino viejo y actualmente 1a. Avenida “El Reformador” 
+                  debido a que en el transitó el Reformador de Guatemala el General Justo Rufino Barrios, 
+                  
+                </p>
+                <!--p class="default-letter-spacing font-weight-bold text-gray-dark wow fadeInUp" data-wow-delay=".4s">We have over fifteen years of successful experience in financial sphere in the US business market.</p><a class="button-width-190 button-primary button-circle button-lg button offset-top-30" href="#">read more</a-->
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img  src="{% static 'images/sanpedro8.jpg' %}" alt="" width="570" height="351"/>
+              </div> <br> <br>
+              <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img  src="{% static 'images/sanpedro4.JPG' %}" alt="" width="570" height="351"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-sm position-relative" id="about">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-lg-6">
+              <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img src="{% static 'images/sanpedro34.jpg' %}" alt="" width="570" height="351"/>
+              </div> <br> <br>
+              <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img src="{% static 'images/sanpedro33.jpg' %}" alt="" width="570" height="351"/>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="block-sm offset-top-50">
+                <!--div class="section-name wow fadeInRight" data-wow-delay=".2s">Acerca de la aldea</div>
+                <h3 class="wow fadeInCenter text-capitalize devider-bottom" data-wow-delay=".3s">Datos<span class="text-primary"> Historicos</span></h3-->
+                <p align="justify" class="offset-xl-40 wow fadeInUp" data-wow-delay=".4s">
+                  Años más tarde las mismas necesidades de los habitantes por el crecimiento de la población 
+                  obligo a los comunitarios a trazar otro camino, el cual parte del lugar denominado “Entre Ríos”
+                  y era conocido como Camino Nuevo, actualmente 2da. Avenida, siendo la más poblada por los 
+                  habitantes y que conduce al centro de la comunidad donde se encuentran los principales 
+                  edificios públicos, tales como: La Escuela Oficial Rural Mixta “María Flores Rivera de Méndez 
+                  Peña”, El Salón Comunal Prof. “Oscar Emiro Barrios García”, El Templo Católico, Cementerio 
+                  General, entre otros. En el año 1978 fue inaugurada otra avenida que denominaron “El Rosario” 
+                  en honor a la Virgen del mismo nombre que se encuentra en el templo católico ahora conocida 
+                  como 3ra. Avenida la cual sirve de enlace con la cuarta calle con la comunidad de la Grandeza 
+                  y las dos primeras avenidas con el Municipio de San Lorenzo, los cuales son transitables en 
+                  cualquier época del año además cuenta con 7 calles principales, diagonales u una que otra 
+                  Vereda y que sirven de comunicación con lugares aledaños.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="decor-text decor-text-1">San José</div>
+      </section>
+
+      <!--Features-->
+      <section class="section custom-section position-relative section-md">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-7 col-lg-7 col-12">
+              <div class="section-name wow fadeInRight">SAN JOSÉ, CABEN</div>
+              <h3 class="text-capitalize devider-left wow fadeInLeft" data-wow-delay=".2s">Características <br> <span class="text-primary">Características Hidrográficas</span></h3>
+              <p>	La comunidad cuenta con riquezas hidrográficas las cuales son de suma importancia y aprovechamiento por los habitantes, existen las siguientes fuentes:</p>
+              <div class="row row-15">
+                <div class="col-xl-6 wow fadeInUp" data-wow-delay=".2s">
+                  <div class="box-default">
+                    <div class="box-default-title">El Rosario</div>
+                    <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                  </div>
+                </div>
+                <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
+                  <div class="box-default">
+                    <div class="box-default-title">El viviente que me ve</div>
+                    <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                  </div>
+                </div>
+                <div class="col-xl-6 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="box-default">
+                    <div class="box-default-title">La Ciénaga</div>
+                    <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                  </div>
+                </div>
+                <div class="col-xl-6 wow fadeInUp" data-wow-delay=".5s">
+                  <div class="box-default">
+                    <div class="box-default-title">Canival</div>
+                    <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                  </div>
+                </div>
+                <div class="col-xl-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="box-default">
+                      <div class="box-default-title">Peña Laja</div>
+                      <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="box-default">
+                      <div class="box-default-title">Agua Tibia</div>
+                      <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 wow fadeInUp" data-wow-delay=".5s">
+                      <div class="box-default">
+                        <div class="box-default-title">El Zarco</div>
+                        <span class="box-default-icon novi-icon icon-lg mercury-icon-lightbulb-gears"></span>
+                      </div>
+                    </div>
+                  <p>	De las anteriores, las fuentes el Rosario, El Viviente que me ve y la 
+                      Ciénaga, forman las tres redes de distribución del  vital líquido en un 95% de las 
+                      viviendas que cuentan con servicio en su domicilio.
+                      Anteriormente contaba con importantes ríos tales como Rio Rosario, El Silencio y Chiquirichapa 
+                      que poco a poco han ido desapareciendo debido a que los agricultores los han captado 
+                      para mini riego.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-left-side wow slideInRight" data-wow-delay=".5s">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcris835%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="decor-text decor-text-2 wow fadeInUp" data-wow-delay=".3s">SanJosé</div>
+      </section>
+     
+      <section class="section section-md bg-gray-lighten">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-10">
+              <div class="section-name wow fadeInRight text-center" data-wow-delay=".2s">ALDEA SAN JOSÉ CABEN, MUNICIPIO DE SAN PEDRO SACATEPÉQUEZ, DEPARTAMENTO DE SAN MARCOS.</div>
+              <h3 class="wow fadeInLeft text-capitalize text-center" data-wow-delay=".3s">NOMINA DE LOS INTEGRANTES DE <span class="text-primary"> LA CORPORACIÓN AUXILIAR 2019</span></h3>
+              <div class="owl-carousel review-carousel" data-items="1" data-sm-items="1" data-md-items="1" data-lg-items="1" data-xl-items="1" data-xxl-items="1" data-dots="true" data-nav="false" data-stage-padding="0" data-loop="false" data-margin="0" data-mouse-drag="true" data-autoplay="false">
+                <div class="item">
+                  <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                  </div>
+                  <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                    <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                      llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                    <div class="item-subsection"><span class="item-subsection-title devider-left">Emir Osbelí Fuentes Vásquez</span><span>Alcalde Auxiliar</span></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                  </div>
+                  <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                    <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                        llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                    <div class="item-subsection"><span class="item-subsection-title devider-left">Eliseo Jonatán Monzón De León</span><span>Segundo Alcalde auxiliar</span></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                  </div>
+                  <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                    <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                        llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                    <div class="item-subsection"><span class="item-subsection-title devider-left">Efraín Aurelio Gonzalez García</span><span>Primer regidor</span></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                  </div>
+                  <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                    <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                        llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                    <div class="item-subsection"><span class="item-subsection-title devider-left">Gener Pedro Aguilar Fuentes</span><span>Segundo regidor</span></div>
+                  </div>
+                </div>
+                <div class="item">
+                    <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                    </div>
+                    <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                      <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                        llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                      <div class="item-subsection"><span class="item-subsection-title devider-left">Amadeo Aníbal Juárez Santos</span><span>Tercer regidor</span></div>
+                    </div>
+                  </div>
+                  <div class="item">
+                      <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                      </div>
+                      <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                        <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                          llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                        <div class="item-subsection"><span class="item-subsection-title devider-left">Oziel Misael De León Fuentes</span><span>Cuarto regidor</span></div>
+                      </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                        </div>
+                        <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                          <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                            llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                          <div class="item-subsection"><span class="item-subsection-title devider-left">Milhen Osberto López Miranda</span><span>Primer Secretario</span></div>
+                        </div>
+                      </div>
+                      <div class="item">
+                          <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                          </div>
+                          <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                            <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                              llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                            <div class="item-subsection"><span class="item-subsection-title devider-left">Roldendi Vinicio Godínez Monzón</span><span>Segundo Secretario</span></div>
+                          </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                            </div>
+                            <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                              <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                                llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                              <div class="item-subsection"><span class="item-subsection-title devider-left">Heber Misael Fuentes Miranda</span><span>Tercer Secretario</span></div>
+                            </div>
+                          </div>
+                          <div class="item">
+                              <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                              </div>
+                              <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                                <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                                  llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                                <div class="item-subsection"><span class="item-subsection-title devider-left">Lisvin Arnulfo Castañón Fuentes</span><span>Cuarto Secretario</span></div>
+                              </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                                </div>
+                                <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                                  <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                                    llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                                  <div class="item-subsection"><span class="item-subsection-title devider-left">Alberto Jesús Ordoñez Pérez</span><span>Quinto Secretario</span></div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                  <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                                  </div>
+                                  <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                                    <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                                      llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                                    <div class="item-subsection"><span class="item-subsection-title devider-left">Noel Iram Fuentes Monzón</span><span>Sexto Secretarior</span></div>
+                                  </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-preview wow fadeInDown" data-wow-delay=".2s"><img src="{% static 'images/user.jpeg' %}" alt="" width="216" height="108"/>
+                                    </div>
+                                    <div class="item-description wow fadeInUp" data-wow-delay=".3s">
+                                      <p>"El camino para cumplir las metas puede ser muy difícil, por momentos te encontrarás con el impulso de rendirte, cuando ese oscuro momento 
+                                        llegue a tu vida, procura recordar la razón por la cual empezaste a luchar por tus metas; eso puede salvarte de rendirte demasiado cerca del final"</p>
+                                      <div class="item-subsection"><span class="item-subsection-title devider-left">Miguel Angel Fuentes Barrios
+                                        </span><span>Primer Agente Auxiliar</span></div>
+                                    </div>
+                                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Google Map-->
+       <section class="section">
+          <h1 align="center">Ubicación</h1>
+          <div align="center" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.3586475304865!2d-91.77548496063345!3d14.978685229209345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e8199467bae5b%3A0x5b51560aa4964c95!2s2%20Av.%2C%20San%20Pedro%20Sacatepequez!5e1!3m2!1ses!2sgt!4v1570727244428!5m2!1ses!2sgt" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+        </section>
+      <!--Footer--><a class="section section-banner" href="https://www.facebook.com/marco.vasquez.589/intense-multipurpose-html-template.html" target="_blank" style="background-image: url({% static 'images/background-01-1920x310.jpg' %}); background-image: -webkit-image-set( url({% static 'images/background-01-1920x310.jpg' %}) 1x, url({% static 'images/background-01-3840x620.jpg' %}) 2x )"><img src="{% static 'images/foreground-01-1600x310.png' %}" srcset="{% static 'images/foreground-01-1600x310.png 1x, images/foreground-01-3200x620.png 2x' %}" alt="" width="1600" height="310"></a>
+      <footer class="section footer-classic section-sm">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-lg-6 wow fadeInLeft">
+              
+              <p class="footer-classic-description offset-top-0 offset-right-25">Una aldea (en árabe:ād-ḍaj’ah (الضيعة) «la granja» ) también llamada caserío , es un asentamiento humano comúnmente localizado en áreas rurales. Es generalmente de tamaño y población menor que un pueblo. Las aldeas han sido la unidad fundamental de las comunidades humanas en la mayoría de las áreas del mundo a lo largo de la historia; desde su aparición en el Neolítico (aparición de la agricultura o Revolución neolítica) hasta después de la Revolución Industrial.</p>
+            </div>
+            <div class="col-lg-3 col-sm-8 wow fadeInUp">
+              <P class="footer-classic-title">Aldea Info.</P>
+              <div class="d-block offset-top-0">San José caben, <span class="d-lg-block">SAN PEDRO, SAN MARCOS</span></div><a class="d-inline-block accent-link" href="mailto:#"> </a><a class="d-inline-block" href="tel:#"> </a>
+              <ul>
+                <li>Lun-Vie:<span class="d-inline-block offset-left-10 text-white">3:00 PM - 7:00 PM</span></li>
+                <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+                <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
+              <P class="footer-classic-title">Links</P>
+              <ul class="footer-classic-nav-list">
+                <li><a href="{% url 'nichos:landing' %} ">Inicio</a></li>
+                <li><a href="{% url 'user:login' %} ">Iniciar Sesión</a></li>
+                <li><a href="{% url 'nichos:contact1' %} ">Acerca De</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container wow fadeInUp" data-wow-delay=".4s">
+          <div class="footer-classic-aside">
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. Todos Los Derechos Reservados. Creado Por <a href="https://www.facebook.com/marco.vasquez.589">Nilsen Arandy Orozco Godinez</a></p>
+            <ul class="social-links">
+              <li><a class="fa fa-linkedin" href="#"></a></li>
+              <li><a class="fa fa fa-twitter" href="#"></a></li>
+              <li><a class="fa fa-facebook" href="#"></a></li>
+              <li><a class="fa fa-instagram" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+<div class="snackbars" id="form-output-global"></div>
+{% endblock %}

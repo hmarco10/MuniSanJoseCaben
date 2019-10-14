@@ -1,0 +1,225 @@
+{% extends 'nichos/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p> cargando...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
+              <div class="rd-navbar-aside">
+                <ul class="list-inline navbar-contact-list">
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                      <div class="unit-body"><a href="tel:#"> </a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
+                      <div class="unit-body"><a href="mailto:#"> </a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
+                      <div class="unit-body"><a href="#">San José Caben, San Pedro, San Marcos.</a></div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="social-links">
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand><a class="brand" href=""><img class="brand-logo-dark" src="{% static 'images/logo-default-200x34.png' %}" alt="" width="100" height="17"/><img class="brand-logo-light" src="{% static 'images/logo-inverse-200x34.png' %}" alt="" width="100" height="17"/></a-->
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:index' user.pk %}">Inicio</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:list_owner' %}">Lista de Propietarios</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:crear_reservacion' user.pk %}">Nueva Reservación</a>
+                      </li>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:contacts' user.pk %}">Acerca De</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="section section-intro context-dark">
+        <div class="intro-bg" style="background: url({% static 'images/listado.jpg' %}) no-repeat;background-size:cover;background-position: top center;"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 text-center">
+              <h1 class="font-weight-bold wow fadeInLeft">Listado De Reservacion De Predios</h1>
+              <p class="intro-description wow fadeInRight">Todo Lo Puedo En Cristo Que Me Fortalece (Filipenses 4:13)</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 text-center offset-top-75" data-wow-delay=".2s"><a class="button-way-point d-inline-block text-center d-inline-flex flex-column justify-content-center" href="" data-custom-scroll-to="reservar"><span class="fa-chevron-down"></span></a></div>
+            </div>
+          </div>
+      </section>
+      <!--Base typography -->
+      <section class="section section-lg bg-default" id="reservar">
+        <div class="container">
+          <div class="row row-50 flex-lg-row-reverse">
+            <div class="col-xl-12">
+              <ul class="list-xl">
+                <li>
+                  <h1 style="text-align:center ">Lista de Reservaciones</h1>
+                  <br>
+                  
+                  <br>
+                  <div>
+
+                    <table class="table table-bordered table-dark">
+                      <thead align="center"  style="color: #505cfd; font-size: x-large; font-family: cursive ">
+                        <th>Propietario</th>
+                        <th>Nomencl.</th>
+                        <th>Predio</th>
+                        <th>Titular</th>  
+                        <th>Espacios</th>
+                        <th>Niveles</th>
+                        <th>Ornato</th>  
+                        <th>Cancelado</th>
+                        <th>Inspección</th>
+                        <th>Fecha</th> 
+                        <th>Acciones</th> 
+                      
+                      </thead>
+                      <tbody>
+                        <tr >
+                            {% for reservation in reservations %}
+                            <td>{{ reservation.propietario.nombre }}</td>
+                            <td>{{ reservation.id}} </td>
+                            <td>  {{ reservation.predio.nomenclatura }}</td> 
+                            <td>  {{ reservation.titular }}</td> 
+                            <td>  {{ reservation.espacios }}</td> 
+                            <td>  {{ reservation.niveles }}</td>
+                            {% if reservation.ornato == True %} 
+                            <td> Si </td>
+                            {% else %}
+                            <td>No</td> 
+                            {% endif %}
+                            {% if reservation.cancelado == True %}
+                            <td>Si</td>
+                            {% else %}
+                            <td>No</td> 
+                            {% endif %} 
+                            {% if reservation.inspeccion == True %}
+                            <td>Si</td> 
+                            {% else %}
+                            <td>No</td> 
+                            {% endif %} 
+                            <td>  {{ reservation.fecha }}</td> 
+
+                            <td align="left">
+                            <a class="btn btn-danger" href="{% url 'nichos:edit-reservation' user.pk reservation.pk %}"  ><i class="far fa-edit"></i> Editar</a>
+                            <a  class="btn btn-danger" href="{% url 'nichos:delete' reservation.pk %}"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                            <a href="{% url 'nichos:categoria_print_one' reservation.pk %}" target="print" class="btn btn-default btn-circle">  
+                              <span class="fa fa-print"></span>  
+                              Imprimir</a>
+                            </td>
+
+                        </tr>
+                        {% endfor %}
+
+                      </tbody>
+                    </table>
+
+                    
+                  </div> <br>
+    
+                  
+                  <p>En esta sección podras gestionar las reservaciones de los predios, en la tabla anterior se visualizan
+                    los datos del propietario y tipo de predio que se reservo, también podrás generar un reporte por cada reservación.</p>
+                </li>               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="section footer-classic section-sm">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-lg-3 wow fadeInLeft">
+             
+              <p class="footer-classic-description offset-top-0 offset-right-25">
+                Una aldea (en árabe:ād-ḍaj’ah (الضيعة) «la granja» ) también llamada caserío , es un asentamiento humano comúnmente localizado en áreas rurales. Es generalmente de tamaño y 
+                población menor que un pueblo.  </p>
+            </div>
+            <div class="col-lg-3 col-sm-8 wow fadeInUp">
+              <P class="footer-classic-title">Aldea Info.</P>
+              <div class="d-block offset-top-0">San José caben, <span class="d-lg-block">SAN PEDRO, SAN MARCOS</span></div><a class="d-inline-block accent-link" href="mailto:#"> </a><a class="d-inline-block" href="tel:#"> </a>
+              <ul>
+                <li>Lun-Vie:<span class="d-inline-block offset-left-10 text-white">3:00 PM - 7:00 PM</span></li>
+                <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+                <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
+                <P class="footer-classic-title">Links</P>
+                <ul class="footer-classic-nav-list">
+                  <li><a href="{% url 'nichos:index' user.pk %} ">Inicio</a></li>
+                  <li><a href="{% url 'nichos:show-reservation' user.pk %} ">Reservaciones</a></li>
+                  <li><a href="{% url 'nichos:list_owner' %} ">Propietarios</a></li>
+                  <li><a href="{% url 'nichos:contacts' user.pk %} ">Acerca De</a></li>
+                </ul>
+              </div>
+           </div>
+        </div>
+        <div class="container wow fadeInUp" data-wow-delay=".4s">
+          <div class="footer-classic-aside">
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. Todos Los Derechos Reservados. Creado Por <a href="https://www.facebook.com/marco.vasquez.589">Nilsen Arandy Orozco Godinez</a></p>
+            <ul class="social-links">
+              <li><a class="fa fa-linkedin" href="#"></a></li>
+              <li><a class="fa fa fa-twitter" href="#"></a></li>
+              <li><a class="fa fa-facebook" href="#"></a></li>
+              <li><a class="fa fa-instagram" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+       
+
+
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+{% endblock %}
+
+
+ 

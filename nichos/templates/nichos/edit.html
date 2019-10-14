@@ -1,0 +1,284 @@
+{% extends 'nichos/base.html' %}
+{% block content %}
+{% load static %}   
+<div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+    <p>Cargando...</p>
+  </div>
+</div>
+<div class="page">
+  <header class="section page-header">
+    <!--RD Navbar-->
+    <div class="rd-navbar-wrap">
+      <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+        <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+        <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
+          <div class="rd-navbar-aside">
+            <ul class="list-inline navbar-contact-list">
+              <li>
+                <div class="unit unit-spacing-xs align-items-center">
+                  <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                  <div class="unit-body"><a href="tel:#"> </a></div>
+                </div>
+              </li>
+              <li>
+                <div class="unit unit-spacing-xs align-items-center">
+                  <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
+                  <div class="unit-body"><a href="mailto:#"> </a></div>
+                </div>
+              </li>
+              <li>
+                <div class="unit unit-spacing-xs align-items-center">
+                  <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
+                  <div class="unit-body"><a href="#">San José Caben, San Pedro, San Marcos.</a></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="social-links">
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin" href="#"></a></li>
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rd-navbar-main-outer">
+          <div class="rd-navbar-main">
+            <!--RD Navbar Panel-->
+            <div class="rd-navbar-panel">
+              <!--RD Navbar Toggle-->
+              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+              <!--RD Navbar Brand-->
+              <div class="rd-navbar-brand">
+                <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="{% static 'images/logo-default-200x34.png' %}" alt="" width="100" height="17"/><img class="brand-logo-light" src="{% static 'images/logo-inverse-200x34.png' %}" alt="" width="100" height="17"/></a> <!-- Te faltaba cargar el load static-->
+              </div>
+            </div>
+            <div class="rd-navbar-main-element">
+              <div class="rd-navbar-nav-wrap">
+                <ul class="rd-navbar-nav">
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:index' user.pk %}">Inicio</a>
+                  </li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url 'nichos:show-reservation' user.pk %}">Lista De Reservaciones</a>
+                  </li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url 'nichos:list_owner'  %}">Lista De Propietarios</a>
+                  </li>                  
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:contacts' user.pk %}">Acerca De</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="section section-intro context-dark">
+        <div class="intro-bg" style="background: url({% static 'images/requisitos2.jpg' %}) no-repeat;background-size:cover;background-position: top center;"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 text-center">
+          <h1 class="font-weight-bold wow fadeInLeft">Modificar Reservación</h1>
+       
+          <p class="intro-description wow fadeInRight">“porque para mi el vivir es Cristo y el morir es ganancia" (Filipenses 1:21)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About page about section-->
+  <section class="section section-md">
+    <div class="container">
+      <div class="row row-40 justify-content-center">
+        <div class="col-lg-6 col-12">
+          <div class="offset-top-45 offset-lg-right-45">
+            <div class="section-name wow fadeInRight" data-wow-delay=".2s">Modificar Reservaciones</div>
+            <h3 class="wow fadeInLeft text-capitalize" data-wow-delay=".3s">Ingrese Nuevos<span class="text-primary"> Datos</span></h3>
+            <form method="POST" action="{% url 'nichos:edit-reservation' user.pk reservation.pk %}">
+              {% csrf_token %}
+                              <div class="row gtr-uniform">
+                              </div>
+                              <div class="row gtr-uniform">
+                                  <label for="name">Titular</label>
+                                  <input class="form-control" type="text" name="titular" id="name" value="{{reservation.titular}}" required/> 
+                                  <label for="latitude">Espacios</label>
+                                  <input  class="form-control" type="text" name="espacios" id="last_name" value="{{reservation.espacios}}" required/>                                 
+                                  <label for="name">Niveles</label>
+                                  <input class="form-control" type="text" name="niveles" id="name" value="{{reservation.niveles}}" required/> 
+                                  <label for="name">ornato</label>
+                                  <input class="form-control" type="checkbox" name="ornato" id="name" value="{{reservation.ornato}}" required/> 
+                                  <label for="name">cancelado</label>
+                                  <input class="form-control" type="checkbox" name="cancelado" id="name" value="{{reservation.cancelado}}" required/> 
+                                  <label for="name">Inspeccion</label>
+                                  <input class="form-control" type="checkbox" name="inspeccion" id="name" value="{{reservation.inspeccion}}" required/> 
+                                  <label for="name">Fecha</label>
+                                  <input class="form-control" type="date" name="fecha" id="name" value='{{ reservation.fecha|date:"Y-m-d"  }}' required/> 
+                                  <label for="name">Predio</label>
+                                  <select name="predio" id=""  class="form-control">
+                                    {% for predio in predios %}
+                                    <option value="{{ predio.id }}" {% if predio.id == pred_instance.predio.id %} selected="selected" {% endif %} >{{ predio.nomenclatura }}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="name">Propietario</label>
+                                  <select name="propietario" id=""  class="form-control">
+                                    {% for propietario in propietarios %}
+                                    <option value="{{ propietario.id }}" {% if propietario.id == prop_instance.propietario.id %} selected="selected" {% endif %} >{{ propietario.nombre }}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <div><button class="btn btn-primary" type="submit" >Editar</button> </div>
+                              </div>
+            </form>
+            
+            <!--section id="wrapper">
+              <div class="wrapper">
+                  <div class="inner">
+                     <form action="post">
+                       <div class="form-group">
+                         <label for="{{ form.tiutlar.id_for_label }} ">{{ form.titular.label}} </label>
+                         <div class="col-sm-8">
+                           {{form.titular}}
+                         </div> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.tiutlar.id_for_label }} ">{{ form.titular.label}} </label>
+                            <div class="col-sm-8">
+                              {{form.titular}}
+                            </div> 
+                           </div>
+
+                           <div class="form-group">
+                              <label for="{{ form.espacios.id_for_label }} ">{{ form.espacios.label}} </label>
+                              <div class="col-sm-8">
+                                {{form.espacios}}
+                              </div> 
+                             </div>
+
+                             <div class="form-group">
+                                <label for="{{ form.niveles.id_for_label }} ">{{ form.niveles.label}} </label>
+                                <div class="col-sm-8">
+                                  {{form.niveles}}
+                                </div> 
+                               </div>
+
+                               <div class="form-group">
+                                  <label for="{{ form.ornato.id_for_label }} ">{{ form.ornato.label}} </label>
+                                  <div class="col-sm-8">
+                                    {{form.ornato}}
+                                  </div> 
+                                 </div>
+
+                                 <div class="form-group">
+                                    <label for="{{ form.cancelado.id_for_label }} ">{{ form.cancelado.label}} </label>
+                                    <div class="col-sm-8">
+                                      {{form.cancelado}}
+                                    </div> 
+                                   </div>
+
+                                   <div class="form-group">
+                                      <label for="{{ form.inspeccion.id_for_label }} ">{{ form.inspeccion.label}} </label>
+                                      <div class="col-sm-8">
+                                        {{form.inspeccion}}
+                                      </div> 
+                                     </div>
+
+                                     <div class="form-group">
+                                        <label for="{{ form.fecha.id_for_label }} ">{{ form.fecha.label}} </label>
+                                        <div class="col-sm-8">
+                                          {{form.fecha}}
+                                        </div> 
+                                       </div>
+
+                                       <div class="form-group">
+                                          <label for="{{ form.propietario.id_for_label }} ">{{ form.propietario.label}} </label>
+                                          <div class="col-sm-8">
+                                            {{form.propietario}}
+                                          </div> 
+                                         </div>
+                                         <div class="form-group">
+                                            <label for="{{ form.predio.id_for_label }} ">{{ form.predio.label}} </label>
+                                            <div class="col-sm-8">
+                                              {{form.predio}}
+                                            </div> 
+                                           </div>
+
+                       <button type="submit">Modificar</button>
+                     </form-->
+                  </div>
+              </div>
+          </section>                          
+                    
+                             
+                                    
+              
+            
+            
+             
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!--Footer--><a class="section section-banner" href="https://www.facebook.com/marco.vasquez.589/intense-multipurpose-html-template.html" target="_blank" style="background-image: url(images/background-01-1920x310.jpg); background-image: -webkit-image-set( url(images/background-01-1920x310.jpg) 1x, url(images/background-01-3840x620.jpg) 2x )"><img src="images/foreground-01-1600x310.png" srcset="images/foreground-01-1600x310.png 1x, images/foreground-01-3200x620.png 2x" alt="" width="1600" height="310"></a>
+  <footer class="section footer-classic section-sm">
+    <div class="container">
+      <div class="row row-30">
+        <div class="col-lg-3 wow fadeInLeft">
+          <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="{% static 'images/logo-default-200x34.png' %}" alt="" width="100" height="17"/><img class="brand-logo-light" src="{% static 'images/logo-inverse-200x34.png' %}" alt="" width="100" height="17"/></a>
+          <p class="footer-classic-description offset-top-0 offset-right-25">Una aldea (en árabe:ād-ḍaj’ah (الضيعة) «la granja» ) también llamada caserío , es un asentamiento humano comúnmente localizado en áreas rurales. Es generalmente de tamaño y población menor que un pueblo. Las aldeas han sido la unidad fundamental de las comunidades humanas en la mayoría de las áreas del mundo a lo largo de la historia; desde su aparición en el Neolítico (aparición de la agricultura o Revolución neolítica) hasta después de la Revolución Industrial.</p>
+        </div>
+        <div class="col-lg-3 col-sm-8 wow fadeInUp">
+          <P class="footer-classic-title">Aldea Info.</P>
+          <div class="d-block offset-top-0">San José Caben, San Pedro<span class="d-lg-block">, San Marcos</span></div><a class="d-inline-block accent-link" href="mailto:#"> </a><a class="d-inline-block" href="tel:#"> </a>
+          <ul>
+            <li>Lun-Vie:<span class="d-inline-block offset-left-10 text-white">3:00 PM - 7:00 PM</span></li>
+            <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+            <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
+          <P class="footer-classic-title">Quick Links</P>
+          <ul class="footer-classic-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
+          <P class="footer-classic-title">newsletter</P>
+          <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+            <div class="form-wrap">
+              <label class="form-label" for="subscribe-email">Your Email Address</label>
+              <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
+            </div>
+            <div class="form-button group-sm text-center text-lg-left">
+              <button class="button button-primary button-circle" type="submit">sign up</button>
+            </div>
+          </form>
+          <p>Be the first to find out about our latest news, updates, and special offers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeInUp" data-wow-delay=".4s">
+      <div class="footer-classic-aside">
+        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. Todos Los Derechos Reservados. Creado Por <a href="https://www.facebook.com/marco.vasquez.589">Nilsen Arandy Orozco Godinez</a></p>
+        <ul class="social-links">
+          <li><a class="fa fa-linkedin" href="#"></a></li>
+          <li><a class="fa fa fa-twitter" href="#"></a></li>
+          <li><a class="fa fa-facebook" href="#"></a></li>
+          <li><a class="fa fa-instagram" href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+<div class="snackbars" id="form-output-global"></div>
+{% endblock %}

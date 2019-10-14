@@ -1,0 +1,294 @@
+{% extends 'nichos/base.html' %}
+{% block content %}
+{% load static %}   
+<div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+    <p>Cargando...</p>
+  </div>
+</div>
+<div class="page">
+  <header class="section page-header">
+    <!--RD Navbar-->
+    <div class="rd-navbar-wrap">
+      <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+        <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+        <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
+          <div class="rd-navbar-aside">
+            <ul class="list-inline navbar-contact-list">
+              <li>
+                <div class="unit unit-spacing-xs align-items-center">
+                  <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                  <div class="unit-body"><a href="tel:#"> </a></div>
+                </div>
+              </li>
+              <li>
+                <div class="unit unit-spacing-xs align-items-center">
+                  <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
+                  <div class="unit-body"><a href="mailto:#"> </a></div>
+                </div>
+              </li>
+              <li>
+                <div class="unit unit-spacing-xs align-items-center">
+                  <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
+                  <div class="unit-body"><a href="#">San José Caben, San Pedro, San Marcos.</a></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="social-links">
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin" href="#"></a></li>
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+              <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rd-navbar-main-outer">
+          <div class="rd-navbar-main">
+            <!--RD Navbar Panel-->
+            <div class="rd-navbar-panel">
+              <!--RD Navbar Toggle-->
+              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+              <!--RD Navbar Brand-->
+              <div class="rd-navbar-brand">
+                <!--Brand><a class="brand" href="index.html"><img class="brand-logo-dark" src="{% static 'images/logo-default-200x34.png' %}" alt="" width="100" height="17"/><img class="brand-logo-light" src="{% static 'images/logo-inverse-200x34.png' %}" alt="" width="100" height="17"/></a> Te faltaba cargar el load static-->
+              </div>
+            </div>
+            <div class="rd-navbar-main-element">
+              <div class="rd-navbar-nav-wrap">
+                <ul class="rd-navbar-nav">
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url 'nichos:index' user.pk %}">Inicio</a>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:list_owner' %}">Lista De Propietarios</a>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:show-reservation' user.pk %}">Lista De Reservaciones</a>
+                  </li>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'nichos:contacts' user.pk %}">Acerca De</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="section section-intro context-dark">
+        <div class="intro-bg" style="background: url({% static 'images/reservar.jpg' %}) no-repeat;background-size:cover;background-position: top center;"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 text-center">
+          <h1 class="font-weight-bold wow fadeInLeft">Reservación de Predios</h1>
+       
+          <p class="intro-description wow fadeInRight">En esta sección podrás reservar predios, “porque para mi el vivir es Cristo y el morir es ganancia (Filipenses 1:21)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About page about section-->
+  <section class="section section-sm position-relative" id="about">
+      <div class="container">
+        <div class="row row-30">
+          <div class="col-lg-6">
+            <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img src="{% static 'images/requisitos3.jpg' %}" alt="" width="570" height="351"/>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="block-sm offset-top-50">
+              <div class="section-name wow fadeInRight" data-wow-delay=".2s">Requisitos para Reservar Predios</div>
+              <h3 class="wow fadeInCenter text-capitalize devider-bottom" data-wow-delay=".3s">Presentar los<span class="text-primary"> siguientes requisitos</span></h3>
+              <p align="justify" class="offset-xl-40 wow fadeInUp" data-wow-delay=".4s">
+                <ul>
+                  <li value="1">1. Copia de DPI.</li>
+                  <li>2. Solvencia de pagos Municipales.</li>
+                  <li>3. Pago del espacio que solicito.</li>
+                  <li>4. Inspección ocular.</li>
+                  
+                </ul>
+              <!--p class="default-letter-spacing font-weight-bold text-gray-dark wow fadeInUp" data-wow-delay=".4s">We have over fifteen years of successful experience in financial sphere in the US business market.</p><a class="button-width-190 button-primary button-circle button-lg button offset-top-30" href="#">read more</a-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="decor-text decor-text-1">San José</div>
+    </section>
+
+    <!-- Our team-->
+  <section class="section section-md">
+      <div class="container">
+        <div class="row row-50 justify-content-center">
+          <div class="col-md col-12 text-center">
+            <div class="section-name wow fadeInRight" data-wow-delay=".2s">Predios</div>
+            <h3 class="wow fadeInLeft text-capitalize" data-wow-delay=".3s">Tipo De<span class="text-primary"> Predio</span></h3>
+            <p class="block-675">Cada predio tiene medidas de 1.10 mts. x 2.40 mts. pudiendo ser uno o varios predios con uno o varios niveles según lo requiera el propietario.</p>
+          </div>
+        </div>
+        <div class="row row-50 justify-content-center">
+          <div class="col-xl-4 col-sm-6 col-10 wow fadeInLeft" data-wow-delay=".3s">
+            <div class="team-classic-wrap">
+              <div class="team-classic-img"><img src="{% static 'images/nicho3.jpg' %}" alt="" width="370" height="198"/> 
+              </div>
+              <div class="block-320 text-center">
+                <h4 class="font-weight-bold">Predio de Ejemplo</h4><span class="d-block">
+                <ul class="justify-content-center social-links offset-top-30">
+                  <li><a class="fa fa-linkedin" href="#"></a></li>
+                  <li><a class="fa fa fa-twitter" href="#"></a></li>
+                  <li><a class="fa fa-facebook" href="#"></a></li>
+                  <li><a class="fa fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-sm-6 col-10 wow fadeInUp" data-wow-delay=".3s">
+            <div class="team-classic-wrap">
+              <div class="team-classic-img"><img src="{% static 'images/nicho2.jpeg' %}" alt="" width="370" height="198"/> <!-- Te faltaba cargar el load static-->
+              </div>
+              <div class="block-320 text-center">
+                  <h4 class="font-weight-bold">Predio de Ejemplo</h4><span class="d-block">
+                  <ul class="justify-content-center social-links offset-top-30">
+                  <li><a class="fa fa-linkedin" href="#"></a></li>
+                  <li><a class="fa fa fa-twitter" href="#"></a></li>
+                  <li><a class="fa fa-facebook" href="#"></a></li>
+                  <li><a class="fa fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-sm-6 col-10 wow fadeInRight" data-wow-delay=".3s">
+            <div class="team-classic-wrap">
+              <div class="team-classic-img"><img src="{% static 'images/nicho3.jpg' %}" alt="" width="370" height="198"/>
+              </div>
+              <div class="block-320 text-center">              
+                <h4 class="font-weight-bold">Predio de Ejemplo</h4><span class="d-block">
+                <ul class="justify-content-center social-links offset-top-30">
+                  <li><a class="fa fa-linkedin" href="#"></a></li>
+                  <li><a class="fa fa fa-twitter" href="#"></a></li>
+                  <li><a class="fa fa-facebook" href="#"></a></li>
+                  <li><a class="fa fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="section section-md">
+    <div class="container">
+      <div class="row row-40 justify-content-center">
+        <div class="col-lg-6 col-12">
+          <div class="offset-top-45 offset-lg-right-45">
+            <div class="section-name wow fadeInRight" data-wow-delay=".2s">Reservacion de Predios</div>
+            <h3 class="wow fadeInLeft text-capitalize" data-wow-delay=".3s">Nueva<span class="text-primary"> Reservacion</span></h3>
+            <section id="wrapper">
+              <div class="wrapper">
+               
+                  <div class="inner">
+                      <section>
+                          
+                          <form method="POST" action="{% url 'nichos:crear_reservacion' user.pk %}">
+                              {% csrf_token %}
+                              <div class="row gtr-uniform">
+                              </div>
+                              <div class="row gtr-uniform">
+                                  <label for="name">Titular</label>
+                                  <input class="form-control" type="text" name="titular" id="name" value="" required/> 
+                                  <label for="latitude">Espacios</label>
+                                  <input  class="form-control" type="text" name="espacios" id="last_name" value="" required/>                                 
+                                  <label for="name">Niveles</label>
+                                  <input class="form-control" type="text" name="niveles" id="name" value="" required/> 
+                                  <label for="name">ornato</label>
+                                  <input class="form-control" type="checkbox" name="ornato" id="name" value="True" required/> 
+                                  <label for="name">canceladp</label>
+                                  <input class="form-control" type="checkbox" name="cancelado" id="name" value="True" required/> 
+                                  <label for="name">Inspeccion</label>
+                                  <input class="form-control" type="checkbox" name="inspeccion" id="name" value="True" required/> 
+                                  <label for="name">Fecha</label>
+                                  <input class="form-control" type="date" name="fecha" id="name" value="" required/> 
+                                  <label for="name">Predio</label>
+                                  <select name="predio" id=""  class="form-control">
+                                    {% for predio in predios %}
+                                    <option value="{{ predio.id }}">{{ predio }}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="name">Propietario</label>
+                                  <select name="propietario" id=""  class="form-control">
+                                    {% for propietario in propietarios %}
+                                    <option value="{{ propietario.id }}">{{ propietario }}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <div><button class="btn btn-primary" type="submit" >Agregar</button> </div>
+                              </div>
+                          </form>
+                      </section>
+                      
+                  </div>
+              </div>
+          </section>                       
+                    
+                             
+                                    
+              
+            
+            <p class="font-weight-bold text-gray-dark wow fadeInUp" data-wow-delay=".4s">Presentar la papelería completa para poder hacer su reservación.</p>
+            <p class="wow fadeInUp" data-wow-delay=".4s">Una vez presentada la papelería debidamente, se procede hacer la recervacion por medio de la plataforma de la aldea de san José Caben.</p>
+            <p class="wow fadeInUp" data-wow-delay=".4s"></p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-10 col-12">
+          <div class="block-decorate-img wow fadeInLeft" data-wow-delay=".2s"><img src="{% static 'images/reservar3.jpg' %}" alt="" width="570" height="351"/> <!-- Te faltaba cargar el load static-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Footer--><a class="section section-banner" href="https://www.facebook.com/marco.vasquez.589/intense-multipurpose-html-template.html" target="_blank" style="background-image: url(images/background-01-1920x310.jpg); background-image: -webkit-image-set( url(images/background-01-1920x310.jpg) 1x, url(images/background-01-3840x620.jpg) 2x )"><img src="images/foreground-01-1600x310.png" srcset="images/foreground-01-1600x310.png 1x, images/foreground-01-3200x620.png 2x" alt="" width="1600" height="310"></a>
+  <footer class="section footer-classic section-sm">
+    <div class="container">
+      <div class="row row-30">
+        <div class="col-lg-3 wow fadeInLeft">
+          
+          <p class="footer-classic-description offset-top-0 offset-right-25">
+            Una aldea (en árabe:ād-ḍaj’ah (الضيعة) «la granja» ) también llamada caserío , es un asentamiento humano comúnmente localizado en áreas rurales. Es generalmente de tamaño y población menor que un pueblo.</p>
+        </div>
+        <div class="col-lg-3 col-sm-8 wow fadeInUp">
+          <P class="footer-classic-title">Aldea Info.</P>
+          <div class="d-block offset-top-0">San José Caben, San Pedro<span class="d-lg-block">San Marcos</span></div><a class="d-inline-block accent-link" href="mailto:#"> </a><a class="d-inline-block" href="tel:#"> </a>
+          <ul>
+            <li>Lun-Vie:<span class="d-inline-block offset-left-10 text-white">3:00 PM - 7:00 PM</span></li>
+            <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+            <li><span class="d-inline-block offset-left-10 text-white"></span></li>
+          </ul>
+        </div>
+          <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
+            <P class="footer-classic-title">Links</P>
+            <ul class="footer-classic-nav-list">
+              <li><a href="{% url 'nichos:index' user.pk %} ">Inicio</a></li>
+              <li><a href="{% url 'nichos:show-reservation' user.pk %} ">Reservaciones</a></li>
+              <li><a href="{% url 'nichos:list_owner' %} ">Propietarios</a></li>
+              <li><a href="{% url 'nichos:contacts' user.pk %} ">Acerca De</a></li>
+            </ul>
+          </div>
+        
+      </div>
+    </div>
+    <div class="container wow fadeInUp" data-wow-delay=".4s">
+      <div class="footer-classic-aside">
+        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. Todos Los Derechos Reservados. Creado Por <a href="https://www.facebook.com/marco.vasquez.589">Nilsen Arandy Orozco Godinez</a></p>
+        <ul class="social-links">
+          <li><a class="fa fa-linkedin" href="#"></a></li>
+          <li><a class="fa fa fa-twitter" href="#"></a></li>
+          <li><a class="fa fa-facebook" href="#"></a></li>
+          <li><a class="fa fa-instagram" href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+<div class="snackbars" id="form-output-global"></div>
+{% endblock %}
